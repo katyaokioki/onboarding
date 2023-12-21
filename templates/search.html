@@ -1,0 +1,39 @@
+<!-- search.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Поиск сотрудника{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h2 class="text-center mt-5">Поиск сотрудника</h2>
+    <form action="/search" method="post">
+      <label for="first_name">Фамилия сотрудника:</label>
+      <input type="text" id="first_name" name="first_name" required>
+      <button type="submit" class="btn btn-primary">Найти</button>
+    </form>
+
+    {% if employee %}
+      <div class="mt-3">
+        <h3>Результаты поиска:</h3>
+        {% for emp in employee %}
+            <ul>
+                <li>ID: {{ emp[0] }}</li>
+                <li>Last Name: {{ emp[1] }}</li>
+                <li>First Name: {{ emp[2] }}</li>
+                <li>Position: {{ emp[3] }}</li>
+                <li>Experience: {{ emp[4] }}</li>
+                <li>Age: {{ emp[5] }}</li>
+                <li>Salary: {{ emp[6] }}</li>
+                <li>Phone Number: {{ emp[7] }}</li>
+                <li>Address: {{ emp[8] }}</li>
+                <li>Email: {{ emp[9] }}</li>
+            </ul>
+        {% endfor %}
+      </div>
+    {% else %}
+        <p>No employee found with the given first name.</p>
+    {% endif %}
+
+  </div>
+{% endblock %}

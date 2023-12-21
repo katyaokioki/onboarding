@@ -1,14 +1,19 @@
 
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-<p>привет</p>
-</body>
-</html>
+<!-- index.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Добро пожаловать на главную страницу{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h2 class="text-center mt-5">Добро пожаловать на главную страницу</h2>
+    <ul>
+        <li><a href="/login">Страница входа</a></li>
+        <li><a href="/map">Карта офиса</a></li>
+        <li><a href="/team">Наша Команда</a></li>
+        <li><a href="/events">Мероприятия офиса</a></li>
+        <li><a href="/search">Поиск сотрудника</a></li>
+    </ul>
+  </div>
+{% endblock %}
