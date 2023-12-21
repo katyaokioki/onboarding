@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Website{% endblock %}</title>
+    <!-- Подключение стилей или других метаданных, если необходимо -->
+</head>
+<body>
+    <header>
+        <!-- Навигационное меню и другие элементы заголовка -->
+        <nav>
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/login">Вход</a></li>
+                <!-- Другие пункты меню -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <!-- Подвал и другие элементы подвала -->
+        <p>&copy; 2023 My Website. All rights reserved.</p>
+    </footer>
+    <!-- Подключение скриптов или других метаданных, если необходимо -->
+</body>
+</html>
