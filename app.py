@@ -55,17 +55,12 @@ def search():
             emp += tuple(zip(*tasks))
             employee_with_tasks.append(emp)
 
-        # print(employee_with_tasks)
         employee = employee_with_tasks
-        # print(employee)
 
     return render_template('search.html', employee=employee)
 
 
 if __name__ == '__main__':
-    # db.create_table()
-    # db.insert_into_table()
-    # print(db.find_all())
     app.run()
 
 
