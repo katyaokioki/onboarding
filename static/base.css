@@ -1,0 +1,42 @@
+/* body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+} */
+
+header {
+    background-color:blueviolet;
+    color: #fff;
+    padding: 5px 0;
+    text-align: center;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.nav_link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+.onboarding {
+    margin: 20px 0;
+    transition: color 0.3s ease; /* Добавленные стили для плавного перехода цвета */
+}
+
+h1:hover {
+    color: #ffcc00;
+}
+

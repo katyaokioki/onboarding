@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='team.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+</head>
+<!-- <ul class="list">
+    <li class="nav_list">
+      <h1 data-name="Карта"><a href="/map">Карта</a></h1>
+    </li>
+    <li class="nav_list">
+      <h1 data-name="команда"><a href="/team">команда</a></h1>
+    </li>
+    <li class="nav_list">
+      <h1 data-name="Мероприятия"><a href="/events">Мероприятия</a></h1>
+    </li>
+    <li class="nav_list">
+      <h1 data-name="Поиск сотрудника"><a href="/search">Поиск сотрудника</a></h1>
+    </li>
+  </ul> -->
+<header>
+  <h1 class="onboarding">Onboarding</h1>
+  <nav>
+    <a class='nav_link' href="/map">Карта</a>
+    <a href="/team" class='nav_link'>Команда</a>
+    <a href="/events" class='nav_link'>Мероприятия</a>
+    <a href="/search" class='nav_link'>Поиск сотрудников</a>
+    <a href="/main" class='nav_link'>Главная</a>
+  </nav>
+</header>
+
+
+<body>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/img1.jpg') }}" alt="kira" style="width:100%">
+        <div class="container">
+          <h2>кира это я</h2>
+          <p class="title">самая лучшая</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>example@example.com</p>
+          <p><button class="button">написать</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/img2.jpg') }}" alt="kate" style="width:100%">
+        <div class="container">
+          <h2>катюша катенька</h2>
+          <p class="title">тем более самая лучшая</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>example@example.com</p>
+          <p><button class="button">написать</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/img3.jpg') }}" height="480px" alt="kate" style="width:100%">
+        <div class="container">
+          <h2>тамик</h2>
+          <p class="title">тем более самая лучшая</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>example@example.com</p>
+          <p><button class="button">написать</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/img4.jpg') }}" alt="kate" style="width:100%">
+        <div class="container">
+          <h2>андрей белорусских</h2>
+          <p class="title">тем более самая лучшая</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>example@example.com</p>
+          <p><button class="button">написать</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

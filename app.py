@@ -1,8 +1,10 @@
 from flask import Flask, request, render_template
 
-import db
+import db, db1
 
 app = Flask(__name__)
+
+app.template_folder = 'static'
 
 
 @app.route('/')
@@ -46,6 +48,16 @@ def search():
     if request.method == 'POST':
         first_name = request.form.get('first_name')
         employee = db.find_by_first_name(str(first_name))
+
+        employee_with_tasks = []
+        for emp in employee:
+            tasks = db1.find_tasks_for_user(emp[0])
+            emp += tuple(zip(*tasks))
+            employee_with_tasks.append(emp)
+
+        # print(employee_with_tasks)
+        employee = employee_with_tasks
+        # print(employee)
 
     return render_template('search.html', employee=employee)
 

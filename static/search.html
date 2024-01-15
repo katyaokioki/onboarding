@@ -1,10 +1,24 @@
 <!-- search.html -->
-
-{% extends 'base.html' %}
-
-{% block title %}Поиск сотрудника{% endblock %}
-
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='search.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+</head>
+<header>
+  <h1 class="onboarding">Onboarding</h1>
+  <nav>
+      <a class='nav_link' href="/map">Карта</a>
+      <a href="/team" class='nav_link'>Команда</a>
+      <a href="/events" class='nav_link'>Мероприятия</a>
+      <a href="/search" class='nav_link'>Поиск сотрудников</a>
+      <a href="/main" class='nav_link'>Главная</a>
+  </nav>
+</header>
+<body>
   <div class="container">
     <h2 class="text-center mt-5">Поиск сотрудника</h2>
     <form action="/search" method="post">
@@ -28,6 +42,13 @@
                 <li>Phone Number: {{ emp[7] }}</li>
                 <li>Address: {{ emp[8] }}</li>
                 <li>Email: {{ emp[9] }}</li>
+                <li>Tasks:
+                  <ul class="task">
+                    {% for task in emp[10] %}
+                      <li>{{ task }}</li>
+                    {% endfor %}
+                  </ul>
+                </li>
             </ul>
         {% endfor %}
       </div>
@@ -36,4 +57,3 @@
     {% endif %}
 
   </div>
-{% endblock %}

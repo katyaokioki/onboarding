@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Вход</title>
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+
+</head>
+
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <div class="background">
+              <div class="shape"></div>
+              <div class="shape"></div>
+            </div>
+          </div>
+          <div class="card-body">
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                <div class="alert alert-danger">
+                  <ul>
+                    {% for message in messages %}
+                      <li>{{ message }}</li>
+                    {% endfor %}
+
+
+
+                  </ul>
+                </div>
+              {% endif %}
+            {% endwith %}
+            <form action="/main">
+              <h3>Login Here</h3>
+      
+              <label for="login">логин</label>
+              <input type="text" placeholder="почта или телефон" id="login">
+      
+              <label for="password">пароль</label>
+              <input type="password" placeholder="введите пароль" id="password">
+      
+              <button>войти</button>
+              <div class="social">
+                <div class="go"><i class="fab fa-google"></i>  гугл</div>
+                <div class="fb"><i class="fab fa-facebook"></i>  фейсбук</div>
+              </div>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
